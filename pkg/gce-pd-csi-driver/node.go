@@ -318,7 +318,8 @@ func (ns *GCENodeServer) NodeGetVolumeStats(ctx context.Context, req *csi.NodeGe
 }
 
 func (ns *GCENodeServer) NodeExpandVolume(ctx context.Context, req *csi.NodeExpandVolumeRequest) (*csi.NodeExpandVolumeResponse, error) {
-	return nil, status.Error(codes.Unimplemented, fmt.Sprintf("NodeExpandVolume is not yet implemented"))
+	nodeResponse := &csi.NodeExpandVolumeResponse{}
+	return nodeResponse, nil
 }
 
 func (ns *GCENodeServer) GetVolumeLimits() (int64, error) {
