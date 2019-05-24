@@ -933,6 +933,22 @@
   pruneopts = "NUT"
   revision = "258e2a2fa64568210fbd6267cf1d8fd87c3cb86e"
 
+[[projects]]
+  digest = "1:aeea1cda5597bcb036ffabf51f845a8092f5f16716af1da6f3231f7a8594423a"
+  name = "sigs.k8s.io/gcp-compute-persistent-disk-csi-driver"
+  packages = [
+    "pkg/common",
+    "pkg/gce-cloud-provider/compute",
+    "pkg/gce-cloud-provider/metadata",
+    "pkg/gce-pd-csi-driver",
+    "pkg/mount-manager",
+    "test/e2e/utils",
+    "test/remote",
+  ]
+  pruneopts = "NUT"
+  revision = "5d62c770f3e331e4236ebe42b74321f007f8c1e7"
+  version = "v0.4.0"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
@@ -968,6 +984,13 @@
     "k8s.io/test-infra/boskos/client",
     "k8s.io/test-infra/boskos/common",
     "k8s.io/utils/exec",
+    "sigs.k8s.io/gcp-compute-persistent-disk-csi-driver/pkg/common",
+    "sigs.k8s.io/gcp-compute-persistent-disk-csi-driver/pkg/gce-cloud-provider/compute",
+    "sigs.k8s.io/gcp-compute-persistent-disk-csi-driver/pkg/gce-cloud-provider/metadata",
+    "sigs.k8s.io/gcp-compute-persistent-disk-csi-driver/pkg/gce-pd-csi-driver",
+    "sigs.k8s.io/gcp-compute-persistent-disk-csi-driver/pkg/mount-manager",
+    "sigs.k8s.io/gcp-compute-persistent-disk-csi-driver/test/e2e/utils",
+    "sigs.k8s.io/gcp-compute-persistent-disk-csi-driver/test/remote",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

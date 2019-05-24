@@ -16,7 +16,7 @@
 
 FROM golang:1.11.2-alpine3.8 as builder
 WORKDIR /go/src/sigs.k8s.io/gcp-compute-persistent-disk-csi-driver
-ADD . .
+COPY . .
 ARG TAG
 RUN CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-X main.vendorVersion='"${TAG:-latest}"' -extldflags "-static"' -o bin/gce-pd-csi-driver ./cmd/
 
